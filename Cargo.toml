@@ -1,0 +1,20 @@
+[package]
+name = "rofi-nerdy"
+authors = ["Rolv Apneseth"]
+description = "Nerd font icon selector plugin for rofi"
+version = "0.0.1"
+edition = "2021"
+license = "AGPL-3.0"
+
+[dependencies]
+cli-clipboard = "0.4.0"
+copypasta = "0.10.0"
+rofi-mode = "0.3.1"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+
+[profile.release]
+strip = true
+
+[lib]
+crate-type = ["cdylib"]
