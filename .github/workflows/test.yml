@@ -23,7 +23,8 @@ jobs:
               uses: Swatinem/rust-cache@v2
 
             - name: Build
-              run: cargo build --library --verbose
+              run: cargo build --release --lib
+              continue-on-error: false
 
             - name: Format
               run: cargo fmt
