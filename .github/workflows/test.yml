@@ -16,23 +16,19 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Bootstrap
-              uses: actions-rs/toolchain@v1
-              with:
-                  toolchain: stable
-                  components: rustfmt, clippy
+            - name: Install stable toolchain
+              run: rustup toolchain install stable
 
-            - name: Formatting
-              uses: actions-rs/cargo@v1
-              with:
-                  command: fmt
-              continue-on-error: false
-
-            - name: Linting
-              uses: actions-rs/cargo@v1
-              with:
-                  command: clippy
-              continue-on-error: false
+            - name: Cache dependencies
+              uses: Swatinem/rust-cache@v2
 
             - name: Build
               run: cargo build --library --verbose
+
+            - name: Format
+              run: cargo fmt
+              continue-on-error: false
+
+            - name: Lint
+              run: cargo clippy
+              continue-on-error: false
