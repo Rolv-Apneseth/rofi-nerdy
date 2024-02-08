@@ -29,10 +29,8 @@ jobs:
               run: cargo build
               continue-on-error: false
 
-            - name: Formatting
-              uses: actions-rs/cargo@v1
-              with:
-                command: fmt
+            - name: Format
+              run: cargo fmt --check && exit 1
               continue-on-error: false
 
             - name: Lint
