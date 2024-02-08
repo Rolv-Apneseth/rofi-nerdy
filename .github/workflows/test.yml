@@ -1,0 +1,38 @@
+name: Test
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+
+env:
+    CARGO_TERM_COLOR: always
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Bootstrap
+              uses: actions-rs/toolchain@v1
+              with:
+                  toolchain: stable
+                  components: rustfmt, clippy
+
+            - name: Formatting
+              uses: actions-rs/cargo@v1
+              with:
+                  command: fmt
+              continue-on-error: false
+
+            - name: Linting
+              uses: actions-rs/cargo@v1
+              with:
+                  command: clippy
+              continue-on-error: false
+
+            - name: Build
+              run: cargo build --library --verbose
