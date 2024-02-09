@@ -37,4 +37,4 @@ jobs:
               run: cargo fmt --check
 
             - name: Lint
-              run: cargo clippy && exit 1
+              run: cargo clippy -- -D warnings
