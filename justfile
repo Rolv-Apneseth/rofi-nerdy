@@ -53,7 +53,7 @@ update-nerd:
 
             output_file.write(f"""        ["{char}", "{key}"],\n""")
 
-        output_file.write("    ]\n}\r")
+        output_file.write("    ]\n}\n")
 
 # Build
 build:

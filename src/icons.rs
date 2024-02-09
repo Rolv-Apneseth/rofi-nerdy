@@ -9329,4 +9329,4 @@ pub fn get_icons() -> Vec<[&'static str; 2]> {
         ["", "weather-wind_west"],
         ["", "weather-windy"],
     ]
-}
+}
