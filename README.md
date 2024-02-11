@@ -61,9 +61,7 @@ cargo build --release --lib
 sudo cp target/release/librofi_nerdy.so /usr/lib/rofi/nerdy.so
 ```
 
-- If you are using either the latest changes from the `rofi` repo, or any other fork with ABI changes (e.g. `rofi-lbonn-wayland-git`), then the build step needs to be preceded by `RUSTFLAGS="--cfg rofi_next"` for it to work
-
----
+If you are using the latest changes from the rofi repo (e.g. rofi-lbonn-wayland-git, rofi-git), then the build step needs to be preceded by RUSTFLAGS="--cfg rofi_next" for it to work
 
 ## Usage
 
