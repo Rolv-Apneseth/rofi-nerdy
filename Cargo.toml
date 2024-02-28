@@ -2,12 +2,12 @@
 name = "rofi-nerdy"
 authors = ["Rolv Apneseth"]
 description = "Nerd font icon selector plugin for rofi"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 license = "AGPL-3.0"
 
 [dependencies]
-rofi-mode = "0.3.1"
+rofi-mode = "0.4.0"
 tracing = "0.1.40"
 tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
 
