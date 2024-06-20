@@ -23,7 +23,9 @@ impl<'rofi> rofi_mode::Mode<'rofi> for Mode<'rofi> {
     const NAME: &'static str = "nerdy\0";
 
     fn init(mut api: rofi_mode::Api<'rofi>) -> Result<Self, ()> {
-        api.set_display_name("nerd icon");
+        if api.display_name().is_none() {
+            api.set_display_name("nerd icon");
+        };
 
         tracing_subscriber::registry()
             .with(fmt::layer().without_time().with_line_number(true))
