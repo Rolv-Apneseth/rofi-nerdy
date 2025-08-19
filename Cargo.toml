@@ -2,7 +2,7 @@
 name = "rofi-nerdy"
 authors = ["Rolv Apneseth"]
 description = "Nerd font icon selector plugin for rofi"
-version = "0.0.7"
+version = "0.0.8"
 edition = "2021"
 license = "AGPL-3.0"
 

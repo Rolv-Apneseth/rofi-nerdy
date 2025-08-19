@@ -415,7 +415,7 @@ dependencies = [
 
 [[package]]
 name = "rofi-nerdy"
-version = "0.0.7"
+version = "0.0.8"
 dependencies = [
  "rofi-mode",
  "tracing",
