@@ -52,6 +52,19 @@ paru -S rofi-nerdy
 
 ---
 
+### Home Manager
+
+```nix
+programs.rofi = {
+  enable = true;
+  plugins = with pkgs; [
+    rofi-nerdy
+  ];
+};
+```
+
+---
+
 ### Manual (not recommended)
 
 ```bash
