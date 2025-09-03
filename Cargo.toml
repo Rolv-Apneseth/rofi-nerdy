@@ -7,9 +7,9 @@ edition = "2021"
 license = "AGPL-3.0"
 
 [dependencies]
-rofi-mode = "0.5.0"
-tracing = "0.1.41"
-tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+rofi-mode = "0.5"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 [profile.release]
 strip = true
