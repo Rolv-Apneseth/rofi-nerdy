@@ -14,7 +14,7 @@ pub fn copy_to_clipboard(content: &str) -> io::Result<Child> {
     }
 
     let mut child = Command::new("xclip")
-        .args(&["-selection", "clipboard"])
+        .args(["-selection", "clipboard"])
         .stdin(Stdio::piped())
         .spawn()?;
 
